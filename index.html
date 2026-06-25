@@ -497,7 +497,8 @@
 
       <div class="footer-bottom">
         <p class="footer-copyright">
-          © 2026 The Cozy Cup Cafe. All rights reserved. Crafted with ☕ & ❤️
+          © 2026 The Cozy Cup Cafe. All rights reserved. Crafted with ☕ & ❤️ <br />
+          Made by <a href="https://freelanceflare.in/" target="_blank" style="color: inherit; text-decoration: underline;">FreelanceFlare</a>
         </p>
         <div class="footer-socials">
           <a href="https://www.facebook.com/share/1AZLzxPNpZ/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
@@ -745,8 +746,6 @@
         heroReview.innerHTML = slide.review;
         heroBlob.style.setProperty('--hero-bg-color', slide.bgColor);
 
-        if (oldPlate) oldPlate.remove();
-
         const newPlate = document.createElement('img');
         newPlate.src = slide.image;
         newPlate.className = 'hero-plate active';
@@ -758,10 +757,14 @@
         thumbnails.forEach(t => t.classList.remove('active'));
         thumbnails[index].classList.add('active');
 
+        if (oldPlate) {
+          setTimeout(() => oldPlate.remove(), 800);
+        }
+
         setTimeout(() => {
           isAnimating = false;
         }, 800);
-      }, 800);
+      }, 400);
     }
 
     document.getElementById('nextSlide').addEventListener('click', () => {
@@ -779,14 +782,7 @@
     // Auto-play
     let autoPlay = setInterval(() => {
       changeSlide((currentSlide + 1) % slides.length);
-    }, 6000);
-
-    heroSection.addEventListener('mouseenter', () => clearInterval(autoPlay));
-    heroSection.addEventListener('mouseleave', () => {
-      autoPlay = setInterval(() => {
-        changeSlide((currentSlide + 1) % slides.length);
-      }, 6000);
-    });
+    }, 8000);
 
 
     // ------- MENU: Tab filtering -------
