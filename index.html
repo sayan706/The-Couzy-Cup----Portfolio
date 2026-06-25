@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cozy Cup — Elevate Your Experience</title>
+  <meta name="description"
+    content="The Cozy Cup Cafe offers premium handcrafted coffee, artisan pastries, and a warm inviting atmosphere. Visit us for an elevated coffee experience." />
+  <meta property="og:title" content="The Cozy Cup Cafe — Premium Coffee Experience" />
+  <meta property="og:description" content="Handcrafted coffee and artisan pastries in a warm, inviting atmosphere." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/webp" href="images/logo.webp" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#hero" class="navbar-logo">
+        <img src="images/logo.webp" alt="The Cozy Cup Cafe Logo" />
+        <span class="navbar-logo-text">The Cozy Cup</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#about">Our Story</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="https://www.zomato.com/kolkata/the-cozy-cup-cafe-belghoria/order?v=o2" target="_blank"
+          class="nav-cta">Order Now</a>
+      </div>
+
+      <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero active-slide" id="hero">
+    <div class="hero-blob" id="heroBlob"></div>
+
+    <div class="hero-inner">
+      <!-- Left side: Rotating Plate -->
+      <div class="hero-visual" id="heroVisual">
+        <img src="images/food_1.webp" alt="Signature Dish" class="hero-plate active" id="heroPlate" />
+      </div>
+
+      <!-- Right side: Content & Info -->
+      <div class="hero-content" id="heroContent">
+        <div class="hero-tagline"><span id="heroTagline">#1 Most loved drink</span></div>
+        <div class="hero-title-container">
+          <h1 class="hero-title" id="heroTitle">SIGNATURE<br />LATTE</h1>
+        </div>
+        <div class="hero-subtitle-container">
+          <p class="hero-subtitle" id="heroSubtitle">Rich espresso balanced with steamed milk and a light layer of foam.
+            A perfect start to your day.</p>
+        </div>
+
+        <div class="hero-info-card" id="heroInfoCard">
+          <div class="info-rating">
+            <div class="info-rating-score" id="heroRating">4.9</div>
+            <div class="info-rating-stars">★★★★★</div>
+          </div>
+          <div class="info-details">
+            <h4 id="heroChef">Chef's Special</h4>
+            <p id="heroReview">"The best latte in town, hands down."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thumbnail Navigation -->
+    <div class="hero-nav">
+      <button class="nav-arrow" id="prevSlide" aria-label="Previous Slide">←</button>
+      <div class="hero-thumbnails" id="heroThumbnails">
+        <div class="thumbnail active" data-index="0">
+          <img src="images/food_1.webp" alt="Sweet Corn" />
+        </div>
+        <div class="thumbnail" data-index="1">
+          <img src="images/food_2.webp" alt="Momos" />
+        </div>
+        <div class="thumbnail" data-index="2">
+          <img src="images/food_3.jpeg" alt="Cold Coffee" />
+        </div>
+        <div class="thumbnail" data-index="3">
+          <img src="images/food_4.jpeg" alt="Sandwich & Fries" />
+        </div>
+        <div class="thumbnail" data-index="4">
+          <img src="images/food_5.jpeg" alt="Kathi Roll" />
+        </div>
+        <div class="thumbnail" data-index="5">
+          <img src="images/food_6.jpeg" alt="Rice Bowl" />
+        </div>
+        <div class="thumbnail" data-index="6">
+          <img src="images/food_7.jpeg" alt="Wrap" />
+        </div>
+        <div class="thumbnail" data-index="7">
+          <img src="images/food_8.jpeg" alt="Frappe" />
+        </div>
+        <div class="thumbnail" data-index="8">
+          <img src="images/food_9.jpeg" alt="Kulhad Coffee" />
+        </div>
+        <div class="thumbnail" data-index="9">
+          <img src="images/food_10.jpeg" alt="Paneer Bowl" />
+        </div>
+        <div class="thumbnail" data-index="10">
+          <img src="images/food_11.jpeg" alt="Chicken Tenders" />
+        </div>
+        <div class="thumbnail" data-index="11">
+          <img src="images/food_12.jpeg" alt="Mixed Rice" />
+        </div>
+        <div class="thumbnail" data-index="12">
+          <img src="images/food_13.jpeg" alt="Classic Shake" />
+        </div>
+      </div>
+      <button class="nav-arrow" id="nextSlide" aria-label="Next Slide">→</button>
+    </div>
+  </section>
+
+
+  <!-- ==================== MENU SECTION ==================== -->
+  <section class="section menu-section" id="menu">
+    <div class="section-header reveal">
+      <p class="section-label">Taste the Difference</p>
+      <h2 class="section-title">Our Menu</h2>
+      <p class="section-subtitle">
+        From aromatic coffees to savory delights, every dish is crafted to perfection using the freshest ingredients.
+      </p>
+    </div>
+
+    <div class="menu-tabs reveal">
+      <button class="menu-tab active" data-tab="all">All Items</button>
+      <button class="menu-tab" data-tab="beverages">Beverages</button>
+      <button class="menu-tab" data-tab="food">Food & Snacks</button>
+    </div>
+
+    <div class="menu-display reveal" id="menuDisplay">
+      <div class="menu-card" data-category="beverages">
+        <div class="menu-card-image-wrap" data-lightbox="images/menu_1.webp">
+          <img src="images/menu_1.webp" alt="The Cozy Cup Cafe Menu - Beverages, Tea, Coffee, Momos, Chicken & More"
+            loading="lazy" />
+          <div class="menu-card-overlay">
+            <span>Click to Enlarge</span>
+          </div>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Beverages, Momos & More</h3>
+          <p class="menu-card-desc">Tea, coffee, momos, chicken, fish, sandwiches & snacks</p>
+        </div>
+      </div>
+
+      <div class="menu-card" data-category="food">
+        <div class="menu-card-image-wrap" data-lightbox="images/menu_2.webp">
+          <img src="images/menu_2.webp" alt="The Cozy Cup Cafe Menu - Rolls, Fried Rice, Chowmin, Combos & More"
+            loading="lazy" />
+          <div class="menu-card-overlay">
+            <span>Click to Enlarge</span>
+          </div>
+        </div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Rolls, Rice & Combos</h3>
+          <p class="menu-card-desc">Rolls, fried rice, chowmin, mocktails, chicken sides & combo meals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== GALLERY SECTION ==================== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-header reveal">
+      <p class="section-label">Step Inside</p>
+      <h2 class="section-title">Our Ambiance</h2>
+      <p class="section-subtitle">
+        A visual journey through our cozy space — where warmth meets character, and every corner invites you to linger.
+      </p>
+    </div>
+
+    <div class="gallery-grid reveal" id="galleryGrid">
+      <div class="gallery-item">
+        <img src="images/shop.webp" alt="The Cozy Cup Cafe storefront at night" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Our Welcoming Storefront</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/shop_2.webp" alt="Warm cafe interior with ambient lighting" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Cozy Interior Vibes</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/shop_3.webp" alt="Our beautiful ambiance" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Inviting Atmosphere</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/menu_2.webp" alt="Delicious cafe items" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Freshly Baked Delights</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/food_1.webp" alt="Premium food items" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Premium Taste</span>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="images/food_2.webp" alt="Signature dish" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <span class="gallery-item-caption">Our Signature Dish</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== ABOUT / STORY SECTION ==================== -->
+  <section class="section about-section" id="about">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img src="images/shop.webp" alt="The Cozy Cup Cafe exterior view" loading="lazy" />
+        <div class="about-image-badge">
+          <span class="badge-icon">☕</span>
+          <span class="badge-text">Est. with Love</span>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <p class="section-label">Our Story</p>
+        <h2 class="section-title">More Than<br />Just Coffee</h2>
+        <p class="about-text">
+          The Cozy Cup Cafe was born from a simple dream — to create a space where people can slow down, savor a
+          perfectly crafted cup, and feel at home. Every bean we source, every recipe we create, and every seat we
+          arrange is designed with you in mind.
+        </p>
+        <p class="about-text">
+          Located in the heart of Beehive Colony, we've become a beloved gathering spot for coffee enthusiasts,
+          students, families, and anyone looking for a warm escape from the everyday rush.
+        </p>
+
+        <div class="about-features">
+          <div class="about-feature">
+            <span class="feature-icon">☕</span>
+            <span>Premium Beans</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-icon">👨‍🍳</span>
+            <span>Expert Crafted</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-icon">🏡</span>
+            <span>Cozy Ambiance</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-icon">❤️</span>
+            <span>Made with Love</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== TESTIMONIALS SECTION ==================== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="section-header reveal">
+      <p class="section-label">Love Letters</p>
+      <h2 class="section-title">What Our Guests Say</h2>
+      <p class="section-subtitle">
+        Every review warms our hearts — just like our coffee warms yours.
+      </p>
+    </div>
+
+    <div class="testimonials-slider reveal">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Awesome quality of food & behavior is too much friendly.. Overall a very nice experience..
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div class="testimonial-author-info">
+            <h4>Jeet Basu</h4>
+            <p>Local Guide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          A hidden gem with the warmest vibe.This cafe handled a massive rush with total grace. Very impressed with the
+          service.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div class="testimonial-author-info">
+            <h4>Subhajit Bag</h4>
+            <p>Reviewer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Food quality is very good and their behaviour also too good with customer. You can enjoy your evening in the
+          cozy cup cafe
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div class="testimonial-author-info">
+            <h4>Saheli Das</h4>
+            <p>Reviewer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Great ambiance with lofty yummy dishes of pocket friendly budget.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div class="testimonial-author-info">
+            <h4>Sougata Chakraborty</h4>
+            <p>Local Guide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★☆</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Food is very good. Definitely try the food. I ate egg & chicken chowmin. It was very tasty. Blue lagoon
+          mocktail was very very good. I'll suggest try atleast once.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S</div>
+          <div class="testimonial-author-info">
+            <h4>Saikat Indu</h4>
+            <p>Reviewer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">
+          Good for affordable in price, nice ambience and perfect cafe for time spend with friends, partner and family
+          also. I visit recently and their staff behave is good and there food is too good.
+        </p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">T</div>
+          <div class="testimonial-author-info">
+            <h4>TANMOY ROY</h4>
+            <p>Reviewer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section class="section contact-section" id="contact">
+    <div class="section-header reveal">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Visit Us Today</h2>
+      <p class="section-subtitle">
+        We'd love to welcome you. Drop by for a cup, or reach out — we're always here.
+      </p>
+    </div>
+
+    <div class="contact-grid reveal">
+      <div class="contact-info-card">
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>Our Location</h4>
+            <p>Beehive Colony, KOL-36<br />West Bengal, India</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <h4>Call Us</h4>
+            <p>+91 7044968349<br />+91 6290068349</p>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>Mon – Sat: 10:00 AM – 10:00 PM<br />Sunday: 11:00 AM – 9:00 PM</p>
+          </div>
+        </div>
+        <!-- <div class="contact-info-item">
+          <div class="contact-icon">🌟</div>
+          <div>
+            <h4>Special</h4>
+            <p>Packaging charge extra ₹9<br />Home delivery available!</p>
+          </div>
+        </div> -->
+      </div>
+
+      <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <input type="text" id="formName" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="formEmail" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" id="formPhone" placeholder="Phone Number" />
+        </div>
+        <div class="form-group">
+          <textarea id="formMessage" placeholder="Your Message..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="formSubmitBtn">
+          Send Message
+          <span>→</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img src="images/logo.webp" alt="The Cozy Cup Cafe" />
+            <span>The Cozy Cup</span>
+          </div>
+          <p>Where every sip is a journey, and every visit feels like coming home. Premium coffee, handcrafted with
+            passion.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">Our Story</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#menu">Tea & Coffee</a></li>
+            <li><a href="#menu">Momos</a></li>
+            <li><a href="#menu">Rolls & Rice</a></li>
+            <li><a href="#menu">Combos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+917044968349">+91 7044968349</a></li>
+            <li><a href="tel:+916290068349">+91 6290068349</a></li>
+            <li><a href="#contact">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2026 The Cozy Cup Cafe. All rights reserved. Crafted with ☕ & ❤️
+        </p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/share/1AZLzxPNpZ/?mibextid=wwXIfr" target="_blank" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/gourab01?igsh=MXB3NDdueWxhbTlkcA==" target="_blank" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://wa.me/916290068349" target="_blank" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
+    <img src="" alt="Enlarged menu view" id="lightboxImg" />
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    /* ==========================================================
+       The Cozy Cup Cafe — Interactive JavaScript
+       ========================================================== */
+
+    // ------- NAVBAR: Scroll effect + mobile menu -------
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navOverlay = document.getElementById('navOverlay');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      navOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    });
+
+    navOverlay.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+      navOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+
+    // Close mobile menu on nav link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+
+    // ------- HERO CAROUSEL LOGIC -------
+    const slides = [
+      {
+        title: "SWEET<br />CORN",
+        subtitle: "Freshly steamed corn tossed with our special masala mix.",
+        tagline: "Healthy Snack",
+        rating: "4.8",
+        chef: "Chef's Special",
+        review: "\"Perfectly seasoned and delicious!\"",
+        image: "images/food_1.webp",
+        bgColor: "rgba(201, 169, 110, 0.15)"
+      },
+      {
+        title: "STEAMED<br />MOMOS",
+        subtitle: "Delicate dumplings served with spicy and creamy dips.",
+        tagline: "Crowd Favorite",
+        rating: "4.9",
+        chef: "Asian Delight",
+        review: "\"Melt-in-your-mouth perfection.\"",
+        image: "images/food_2.webp",
+        bgColor: "rgba(166, 123, 91, 0.15)"
+      },
+      {
+        title: "CHOCO<br />FRAPPE",
+        subtitle: "Rich cold coffee blended with chocolate syrup and cream.",
+        tagline: "Summer Special",
+        rating: "4.9",
+        chef: "Barista Choice",
+        review: "\"The ultimate chocolate lover's dream.\"",
+        image: "images/food_3.jpeg",
+        bgColor: "rgba(62, 39, 35, 0.15)"
+      },
+      {
+        title: "GRILLED<br />SANDWICH",
+        subtitle: "Crispy grilled sandwich loaded with filling, served with hot fries.",
+        tagline: "Perfect Bite",
+        rating: "4.7",
+        chef: "Classic Snacks",
+        review: "\"A comforting and fulfilling meal.\"",
+        image: "images/food_4.jpeg",
+        bgColor: "rgba(201, 169, 110, 0.15)"
+      },
+      {
+        title: "SPICY<br />WRAP",
+        subtitle: "Flavorful fillings wrapped in a soft, fresh flatbread.",
+        tagline: "On the Go",
+        rating: "4.8",
+        chef: "Street Style",
+        review: "\"Packed with authentic spices.\"",
+        image: "images/food_5.jpeg",
+        bgColor: "rgba(166, 123, 91, 0.15)"
+      },
+      {
+        title: "FRIED<br />RICE",
+        subtitle: "Aromatic wok-tossed rice served with a delicious side.",
+        tagline: "Hearty Meal",
+        rating: "4.9",
+        chef: "Chef's Special",
+        review: "\"The flavors are absolutely incredible.\"",
+        image: "images/food_6.jpeg",
+        bgColor: "rgba(62, 39, 35, 0.15)"
+      },
+      {
+        title: "KATHI<br />ROLL",
+        subtitle: "A popular street food wrap stuffed with savory fillings.",
+        tagline: "Quick Bite",
+        rating: "4.6",
+        chef: "Signature Roll",
+        review: "\"A perfect blend of spices.\"",
+        image: "images/food_7.jpeg",
+        bgColor: "rgba(201, 169, 110, 0.15)"
+      },
+      {
+        title: "COLD<br />COFFEE",
+        subtitle: "Classic iced coffee topped with chocolate drizzle.",
+        tagline: "Refreshing",
+        rating: "4.8",
+        chef: "Cafe Classic",
+        review: "\"Keeps me coming back every day.\"",
+        image: "images/food_8.jpeg",
+        bgColor: "rgba(166, 123, 91, 0.15)"
+      },
+      {
+        title: "KULHAD<br />COFFEE",
+        subtitle: "Traditional earthy coffee served in a clay cup.",
+        tagline: "Desi Vibes",
+        rating: "5.0",
+        chef: "Authentic Taste",
+        review: "\"Nothing beats coffee in a kulhad!\"",
+        image: "images/food_9.jpeg",
+        bgColor: "rgba(62, 39, 35, 0.15)"
+      },
+      {
+        title: "RICE<br />BOWL",
+        subtitle: "Comforting fried rice paired with spicy paneer manchurian.",
+        tagline: "Comfort Food",
+        rating: "4.9",
+        chef: "Soul Food",
+        review: "\"The gravy is perfectly balanced.\"",
+        image: "images/food_10.jpeg",
+        bgColor: "rgba(201, 169, 110, 0.15)"
+      },
+      {
+        title: "CRISPY<br />TENDERS",
+        subtitle: "Golden, crunchy chicken tenders served with a tangy dip.",
+        tagline: "Crunchy Delight",
+        rating: "4.8",
+        chef: "Appetizer Star",
+        review: "\"Super crispy on the outside, juicy inside.\"",
+        image: "images/food_11.jpeg",
+        bgColor: "rgba(166, 123, 91, 0.15)"
+      },
+      {
+        title: "MIXED<br />RICE",
+        subtitle: "A royal mix of flavors with perfectly cooked rice and gravy.",
+        tagline: "Signature Dish",
+        rating: "5.0",
+        chef: "Master Chef",
+        review: "\"A must-try for everyone.\"",
+        image: "images/food_12.jpeg",
+        bgColor: "rgba(62, 39, 35, 0.15)"
+      },
+      {
+        title: "CLASSIC<br />SHAKE",
+        subtitle: "A smooth and creamy milkshake to sweeten your day.",
+        tagline: "Sweet Treat",
+        rating: "4.9",
+        chef: "Dessert Drink",
+        review: "\"The perfect end to a great meal.\"",
+        image: "images/food_13.jpeg",
+        bgColor: "rgba(201, 169, 110, 0.15)"
+      }
+    ];
+
+    let currentSlide = 0;
+    let isAnimating = false;
+
+    const heroSection = document.getElementById('hero');
+    const heroBlob = document.getElementById('heroBlob');
+    const heroVisual = document.getElementById('heroVisual');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroSubtitle = document.getElementById('heroSubtitle');
+    const heroTagline = document.getElementById('heroTagline');
+    const heroRating = document.getElementById('heroRating');
+    const heroChef = document.getElementById('heroChef');
+    const heroReview = document.getElementById('heroReview');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    function changeSlide(index) {
+      if (isAnimating || currentSlide === index) return;
+      isAnimating = true;
+
+      const oldPlate = heroVisual.querySelector('.hero-plate.active');
+      if (oldPlate) {
+        oldPlate.classList.remove('active');
+        oldPlate.classList.add('exit');
+      }
+
+      heroSection.classList.remove('active-slide');
+
+      setTimeout(() => {
+        const slide = slides[index];
+        heroTitle.innerHTML = slide.title;
+        heroSubtitle.innerHTML = slide.subtitle;
+        heroTagline.innerHTML = slide.tagline;
+        heroRating.innerHTML = slide.rating;
+        heroChef.innerHTML = slide.chef;
+        heroReview.innerHTML = slide.review;
+        heroBlob.style.setProperty('--hero-bg-color', slide.bgColor);
+
+        if (oldPlate) oldPlate.remove();
+
+        const newPlate = document.createElement('img');
+        newPlate.src = slide.image;
+        newPlate.className = 'hero-plate active';
+        heroVisual.appendChild(newPlate);
+
+        heroSection.classList.add('active-slide');
+        currentSlide = index;
+
+        thumbnails.forEach(t => t.classList.remove('active'));
+        thumbnails[index].classList.add('active');
+
+        setTimeout(() => {
+          isAnimating = false;
+        }, 800);
+      }, 800);
+    }
+
+    document.getElementById('nextSlide').addEventListener('click', () => {
+      changeSlide((currentSlide + 1) % slides.length);
+    });
+
+    document.getElementById('prevSlide').addEventListener('click', () => {
+      changeSlide((currentSlide - 1 + slides.length) % slides.length);
+    });
+
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => changeSlide(index));
+    });
+
+    // Auto-play
+    let autoPlay = setInterval(() => {
+      changeSlide((currentSlide + 1) % slides.length);
+    }, 6000);
+
+    heroSection.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    heroSection.addEventListener('mouseleave', () => {
+      autoPlay = setInterval(() => {
+        changeSlide((currentSlide + 1) % slides.length);
+      }, 6000);
+    });
+
+
+    // ------- MENU: Tab filtering -------
+    const menuTabs = document.querySelectorAll('.menu-tab');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    menuTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Update active tab
+        menuTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const category = tab.dataset.tab;
+
+        menuCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            card.style.animation = 'fadeInUp 0.5s var(--ease-smooth) both';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+
+    // ------- LIGHTBOX -------
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('[data-lightbox]').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        lightboxImg.src = trigger.dataset.lightbox;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+
+    // ------- SCROLL REVEAL ANIMATIONS -------
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Stagger child reveals
+          setTimeout(() => {
+            entry.target.classList.add('revealed');
+          }, index * 100);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+
+    // ------- CONTACT FORM HANDLER -------
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('formSubmitBtn');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = 'Sent! ✓';
+      btn.style.background = 'linear-gradient(135deg, #6b9e6b, #89b889)';
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        e.target.reset();
+      }, 2500);
+    }
+
+
+    // ------- SMOOTH SCROLL for anchor links -------
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const topPos = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: topPos, behavior: 'smooth' });
+        }
+      });
+    });
+
+
+    // ------- ACTIVE NAV LINK highlight on scroll -------
+    const sections = document.querySelectorAll('section[id]');
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + 150;
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.querySelectorAll('a').forEach(link => {
+            link.style.fontWeight = '';
+            if (link.getAttribute('href') === '#' + id) {
+              link.style.fontWeight = '700';
+            }
+          });
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
