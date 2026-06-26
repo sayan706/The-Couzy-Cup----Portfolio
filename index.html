@@ -909,6 +909,41 @@
       });
     });
 
+    // ------- SOURCE CODE PROTECTION -------
+    // Disable Right Click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable common keyboard shortcuts for developer tools and saving
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'F12') {
+        e.preventDefault();
+      }
+      
+      const key = e.key.toLowerCase();
+      
+      if (e.ctrlKey && e.shiftKey && (key === 'i' || key === 'j' || key === 'c')) {
+        e.preventDefault();
+      }
+      
+      if (e.ctrlKey && (key === 'u' || key === 's' || key === 'p')) {
+        e.preventDefault();
+      }
+    });
+
+    // Disable text selection (except for input fields)
+    document.addEventListener('selectstart', (e) => {
+      if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+      }
+    });
+
+    // Disable drag and drop for images
+    document.addEventListener('dragstart', (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
+
   </script>
 
 </body>
