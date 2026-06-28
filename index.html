@@ -870,14 +870,44 @@
       e.preventDefault();
       const btn = document.getElementById('formSubmitBtn');
       const originalText = btn.innerHTML;
-      btn.innerHTML = 'Sent! ✓';
-      btn.style.background = 'linear-gradient(135deg, #6b9e6b, #89b889)';
+      
+      const name = document.getElementById('formName').value;
+      const email = document.getElementById('formEmail').value;
+      const phone = document.getElementById('formPhone').value;
+      const message = document.getElementById('formMessage').value;
 
-      setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.background = '';
-        e.target.reset();
-      }, 2500);
+      btn.innerHTML = 'Sending...';
+      btn.disabled = true;
+
+      fetch('https://cozycup-smtp.vercel.app/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, phone, message }),
+      })
+      .then(response => {
+        if (response.ok) {
+          btn.innerHTML = 'Sent! ✓';
+          btn.style.background = 'linear-gradient(135deg, #6b9e6b, #89b889)';
+          e.target.reset();
+        } else {
+          btn.innerHTML = 'Failed ❌';
+          btn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        btn.innerHTML = 'Error ❌';
+        btn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     }
 
 
