@@ -102,7 +102,7 @@
           <img src="images/food_5.jpeg" alt="Keema Egg Roll" />
         </div>
         <div class="thumbnail" data-index="3">
-          <img src="images/food_6.jpeg" alt="Rice Bowl" />
+          <img src="images/food_6.jpeg" alt="Egg Chicken Fried Rice" />
         </div>
         <div class="thumbnail" data-index="4">
           <img src="images/food_7.jpeg" alt="Wrap" />
@@ -114,7 +114,7 @@
           <img src="images/food_9.jpeg" alt="Kulhad Coffee" />
         </div>
         <div class="thumbnail" data-index="7">
-          <img src="images/food_10.jpeg" alt="Paneer Bowl" />
+          <img src="images/food_10.jpeg" alt="Fried Rice & Chilli Chicken" />
         </div>
         <div class="thumbnail" data-index="8">
           <img src="images/food_11.jpeg" alt="Crispy Chicken" />
@@ -209,7 +209,7 @@
 
     <div class="gallery-grid reveal" id="galleryGrid">
       <div class="gallery-item">
-        <img src="images/shop.webp" alt="The Cozy Cup Cafe storefront at night" loading="lazy" />
+        <img src="images/ambiance4.jpeg" alt="The Cozy Cup Cafe storefront at night" loading="lazy" />
         <div class="gallery-item-overlay">
           <span class="gallery-item-caption">Our Welcoming Storefront</span>
         </div>
@@ -243,12 +243,6 @@
         </div>
       </div>
 
-      <div class="gallery-item">
-        <img src="images/ambiance4.jpeg" alt="Vibrant Atmosphere" loading="lazy" />
-        <div class="gallery-item-overlay">
-          <span class="gallery-item-caption">Vibrant Atmosphere</span>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -257,7 +251,7 @@
   <section class="section about-section" id="about">
     <div class="about-grid">
       <div class="about-image-wrap reveal">
-        <img src="images/shop.webp" alt="The Cozy Cup Cafe exterior view" loading="lazy" />
+        <img src="images/ambiance2.jpeg" alt="The Cozy Cup Cafe exterior view" loading="lazy" />
         <div class="about-image-badge">
           <span class="badge-icon">☕</span>
           <span class="badge-text">Est. with Love</span>
@@ -666,14 +660,15 @@
         bgColor: "rgba(166, 123, 91, 0.15)"
       },
       {
-        title: "FRIED<br />RICE",
-        subtitle: "Aromatic wok-tossed rice served with a delicious side.",
+        title: "EGG CHICKEN<br />FRIED RICE",
+        subtitle: "Aromatic wok-tossed egg and chicken fried rice.",
         tagline: "Hearty Meal",
         rating: "4.9",
         chef: "Chef's Special",
         review: "\"The flavors are absolutely incredible.\"",
         image: "images/food_6.jpeg",
-        bgColor: "rgba(62, 39, 35, 0.15)"
+        bgColor: "rgba(62, 39, 35, 0.15)",
+        containFit: true
       },
       {
         title: "KATHI<br />ROLL",
@@ -706,12 +701,12 @@
         bgColor: "rgba(62, 39, 35, 0.15)"
       },
       {
-        title: "RICE<br />BOWL",
-        subtitle: "Comforting fried rice paired with spicy paneer manchurian.",
-        tagline: "Comfort Food",
+        title: "FRIED RICE &<br />CHILLI CHICKEN",
+        subtitle: "Comforting fried rice paired with our signature spicy chilli chicken.",
+        tagline: "Perfect Combo",
         rating: "4.9",
-        chef: "Soul Food",
-        review: "\"The gravy is perfectly balanced.\"",
+        chef: "Combo Meal",
+        review: "\"The ultimate comfort combo.\"",
         image: "images/food_10.jpeg",
         bgColor: "rgba(201, 169, 110, 0.15)"
       },
@@ -793,7 +788,8 @@
         chef: "Street Style",
         review: "\"Tastes just like home!\"",
         image: "images/Egg Chicken Noodles.jpeg",
-        bgColor: "rgba(201, 169, 110, 0.15)"
+        bgColor: "rgba(201, 169, 110, 0.15)",
+        containFit: true
       },
       {
         title: "VEG CORN<br />SOUP",
@@ -846,6 +842,9 @@
         const newPlate = document.createElement('img');
         newPlate.src = slide.image;
         newPlate.className = 'hero-plate active';
+        if (slide.containFit) {
+          newPlate.classList.add('contain-fit');
+        }
         heroVisual.appendChild(newPlate);
 
         heroSection.classList.add('active-slide');

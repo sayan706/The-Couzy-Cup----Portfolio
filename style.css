@@ -385,6 +385,11 @@ button {
   pointer-events: none;
 }
 
+.hero-plate.contain-fit {
+  object-fit: contain;
+  background-color: var(--off-white);
+}
+
 .hero-plate.active {
   opacity: 1;
   transform: translateX(0) rotate(0deg);
