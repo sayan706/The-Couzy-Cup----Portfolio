@@ -872,6 +872,70 @@ button {
 
 
 /* ===================================================
+   VIDEO AMBIANCE SECTION
+   =================================================== */
+.video-ambiance-section {
+  padding: 0;
+  position: relative;
+  background: var(--warm-black);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ambiance-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: 0.65; /* Darkened slightly to make text pop */
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-2xl);
+  background: rgba(26, 18, 9, 0.45);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  box-shadow: var(--shadow-xl);
+  max-width: 90%;
+}
+
+.video-caption {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--off-white);
+  line-height: 1.15;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  margin-bottom: var(--space-sm);
+}
+
+.video-caption-sub {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--gold-light);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ===================================================
    GALLERY / AMBIANCE SECTION
    =================================================== */
 .gallery-section {

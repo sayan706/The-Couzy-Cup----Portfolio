@@ -197,6 +197,21 @@
   </section>
 
 
+  <!-- ==================== VIDEO AMBIANCE SECTION ==================== -->
+  <section class="section video-ambiance-section" id="video-ambiance">
+    <div class="video-container reveal">
+      <video autoplay muted loop playsinline class="ambiance-video">
+        <source src="images/ambiance5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay">
+        <h2 class="video-caption">Feel the Vibe. Stay Awhile.</h2>
+        <p class="video-caption-sub">Immerse yourself in our cozy atmosphere.</p>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ==================== GALLERY SECTION ==================== -->
   <section class="section gallery-section" id="gallery">
     <div class="section-header reveal">
@@ -861,22 +876,38 @@
       }, 400);
     }
 
+    // Auto-play logic
+    let autoPlayInterval;
+    
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(() => {
+        changeSlide((currentSlide + 1) % slides.length);
+      }, 8000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    }
+
     document.getElementById('nextSlide').addEventListener('click', () => {
       changeSlide((currentSlide + 1) % slides.length);
+      resetAutoPlay();
     });
 
     document.getElementById('prevSlide').addEventListener('click', () => {
       changeSlide((currentSlide - 1 + slides.length) % slides.length);
+      resetAutoPlay();
     });
 
     thumbnails.forEach((thumb, index) => {
-      thumb.addEventListener('click', () => changeSlide(index));
+      thumb.addEventListener('click', () => {
+        changeSlide(index);
+        resetAutoPlay();
+      });
     });
 
-    // Auto-play
-    let autoPlay = setInterval(() => {
-      changeSlide((currentSlide + 1) % slides.length);
-    }, 8000);
+    startAutoPlay();
 
 
     // ------- MENU: Tab filtering -------
