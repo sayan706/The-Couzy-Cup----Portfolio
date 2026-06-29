@@ -8,9 +8,12 @@
   <title>The Cozy Cup Cafe — A Sweet & Cozy Experience | Best Fast Food & Tea Near Dunlop</title>
   <meta name="description"
     content="Looking for the best fast food or tea cafe near Dunlop? The Cozy Cup Cafe in Belghoria offers premium handcrafted coffee, delicious fast food, momos, and a warm inviting atmosphere." />
-  <meta name="keywords" content="best fast food cafe near dunlop, best tea cafe near dunlop, best food cafe near dunlop, best cafes near me, cozy cup cafe, belghoria cafe, cafes in kolkata, best coffee shop, best momos near dunlop, top rated cafe in belghoria" />
-  <meta property="og:title" content="The Cozy Cup Cafe — A Sweet & Cozy Experience | Best Fast Food & Tea Near Dunlop" />
-  <meta property="og:description" content="Looking for the best fast food or tea cafe near Dunlop? The Cozy Cup Cafe in Belghoria offers premium coffee, fast food, and a warm inviting atmosphere." />
+  <meta name="keywords"
+    content="best fast food cafe near dunlop, best tea cafe near dunlop, best food cafe near dunlop, best cafes near me, cozy cup cafe, belghoria cafe, cafes in kolkata, best coffee shop, best momos near dunlop, top rated cafe in belghoria" />
+  <meta property="og:title"
+    content="The Cozy Cup Cafe — A Sweet & Cozy Experience | Best Fast Food & Tea Near Dunlop" />
+  <meta property="og:description"
+    content="Looking for the best fast food or tea cafe near Dunlop? The Cozy Cup Cafe in Belghoria offers premium coffee, fast food, and a warm inviting atmosphere." />
   <meta property="og:type" content="website" />
   <link rel="icon" type="image/webp" href="images/logo.webp" />
   <link rel="stylesheet" href="style.css" />
@@ -402,21 +405,24 @@
     <div class="contact-grid reveal">
       <div class="contact-info-card">
         <div class="contact-info-item">
-          <div class="contact-icon">📍</div>
+          <a href="https://maps.app.goo.gl/ANe2drjpt8nGrwTKA" target="_blank" class="contact-icon"
+            style="text-decoration: none;">📍</a>
           <div>
             <h4>Our Location</h4>
-            <p>Beehive Colony, KOL-36<br />West Bengal, India</p>
+            <p>Beehive Colony, KOL-56<br />West Bengal, India</p>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-icon">📞</div>
+          <a href="tel:+917044968349" class="contact-icon" style="text-decoration: none;">📞</a>
           <div>
             <h4>Call Us</h4>
-            <p>+91 7044968349<br />+91 6290068349</p>
+            <p><a href="tel:+917044968349" style="color: inherit; text-decoration: none;">+91 7044968349</a><br /><a
+                href="tel:+916290068349" style="color: inherit; text-decoration: none;">+91 6290068349</a></p>
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="contact-icon">🕐</div>
+          <a href="https://share.google/as2dFB5DdiOU8TYop" target="_blank" class="contact-icon"
+            style="text-decoration: none;">🕐</a>
           <div>
             <h4>Opening Hours</h4>
             <p>Mon – Sat: 10:00 AM – 10:00 PM<br />Sunday: 11:00 AM – 9:00 PM</p>
@@ -870,7 +876,7 @@
       e.preventDefault();
       const btn = document.getElementById('formSubmitBtn');
       const originalText = btn.innerHTML;
-      
+
       const name = document.getElementById('formName').value;
       const email = document.getElementById('formEmail').value;
       const phone = document.getElementById('formPhone').value;
@@ -886,28 +892,28 @@
         },
         body: JSON.stringify({ name, email, phone, message }),
       })
-      .then(response => {
-        if (response.ok) {
-          btn.innerHTML = 'Sent! ✓';
-          btn.style.background = 'linear-gradient(135deg, #6b9e6b, #89b889)';
-          e.target.reset();
-        } else {
-          btn.innerHTML = 'Failed ❌';
+        .then(response => {
+          if (response.ok) {
+            btn.innerHTML = 'Sent! ✓';
+            btn.style.background = 'linear-gradient(135deg, #6b9e6b, #89b889)';
+            e.target.reset();
+          } else {
+            btn.innerHTML = 'Failed ❌';
+            btn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          btn.innerHTML = 'Error ❌';
           btn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        btn.innerHTML = 'Error ❌';
-        btn.style.background = 'linear-gradient(135deg, #e74c3c, #c0392b)';
-      })
-      .finally(() => {
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.style.background = '';
-          btn.disabled = false;
-        }, 3000);
-      });
+        })
+        .finally(() => {
+          setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+            btn.disabled = false;
+          }, 3000);
+        });
     }
 
 
